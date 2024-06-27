@@ -27,10 +27,11 @@ This application reads JSON data containing user login behavior from an AWS SQS 
 ### Docker Setup
 
 1. Clone this repository:
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+      ```bash
+    git clone https://github.com/parthrudakia/ETL_from_AWS_SQS
+    cd ETL_from_AWS_SQS
     ```
+
 
 2. Start the Docker containers:
 
