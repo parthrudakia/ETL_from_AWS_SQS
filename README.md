@@ -8,7 +8,7 @@ Below is the error message I was getting while working on it. This issue is also
 
 To Troubleshoot this issue, I went through Localstack's documentation, but unfortunately could not find the fix.  
 
-
+However, It can be easily solved by using Localstack's latest release, but that was out of the scope for this project.
 
 ## Overview
 
