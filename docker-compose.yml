@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  localstack:
+    image: fetchdocker/data-takehome-localstack
+    ports:
+      - "4566:4566"
+
+  postgres:
+    image: fetchdocker/data-takehome-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+
+  app:
+    build: ./app
+    depends_on:
+      - localstack
+      - postgres
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres
