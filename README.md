@@ -61,7 +61,7 @@ This application reads JSON data containing user login behavior from an AWS SQS 
 
 2. Run the ETL script:
     ```bash
-    python etl.py
+    python main.py
     ```
 
 ## Questions and Answers
